@@ -1,0 +1,53 @@
+<!-- cart.html -->
+{% extends 'gallery/base.html' %}
+{% load static %}
+
+{% block content %}
+    <style>
+        /* Add your CSS styles here */
+.cart-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.continue-shopping {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+}
+
+.continue-shopping:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <ul class="cart-items">
+            {% for artwork, quantity in cart_items.items %}
+                <li class="cart-item">
+                    <span class="item-name">{{ artwork.title }}</span> - Quantity: <span class="item-quantity">{{ quantity }}</span> - Price: ${{ artwork.price }}
+                </li>
+            {% endfor %}
+        </ul>
+        <p>Total Amount: ${{ total_amount }}</p>
+        <a href="{% url 'home' %}" class="continue-shopping">Continue Shopping</a>
+    </div>
+{% endblock %}

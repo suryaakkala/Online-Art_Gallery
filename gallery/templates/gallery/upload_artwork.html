@@ -1,0 +1,14 @@
+<!-- upload_artwork.html -->
+{% extends 'gallery/base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'gallery/css/upload_styles.css' %}">
+    <div class="form-container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="upload-button">Submit</button>
+        </form>
+    </div>
+{% endblock %}
+ 

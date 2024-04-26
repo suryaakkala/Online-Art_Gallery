@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "meta-viewport": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "document-title": "off"
+      }
+    ],
+    "no-inline-styles": "off",
+    "meta-charset-utf-8": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_chr <= 115",
+    "not and_ff <= 115",
+    "not chrome <= 115",
+    "not edge <= 115",
+    "not firefox <= 116",
+    "not ios_saf <= 16.5",
+    "not opera <= 101",
+    "not safari <= 16.5",
+    "not samsung <= 21"
+  ]
+}

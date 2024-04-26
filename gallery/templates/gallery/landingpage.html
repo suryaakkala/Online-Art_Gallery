@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SDP | ART GALLERY</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&amp;display=swap'>
+  <link rel="stylesheet" type="text/css" href="{% static 'gallery/css/landing.css' %}"> 
+</head> 
+<body>
+
+  <h1 class="heading" aria-label="nebula">
+    ART GALLERY
+  </h1>
+
+  <button class="button" onclick="redirectToLogin()">Proceed</button>
+  
+
+ <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+  <script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
+  <script  src="{% static 'gallery/js/landing.js' %}" charset="utf-8"></script> 
+  <script>
+    const button = document.querySelector(".button");
+    button.addEventListener("click", (e) => {
+    e.preventDefault;
+    button.classList.add("animate");
+    setTimeout(() => {
+      button.classList.remove("animate");
+    }, 600);
+  });
+</script>
+<script>
+  function redirectToLogin() {
+    setTimeout(function() {
+      window.location.href = "/login"; 
+    }, 1000); //delay
+  }
+</script>
+
+</body>
+</html>

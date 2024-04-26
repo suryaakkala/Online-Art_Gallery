@@ -1,0 +1,39 @@
+<!-- gallery/templates/gallery/base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}Art Gallery{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'gallery/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar"> <!-- Add the "navbar" class -->
+            <div class="navbar-left">
+                <a href="{% url 'home' %}" class="logo">ARTGALLERY</a> <!-- Add the "logo" class -->
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li class="link"><a href="{% url 'home' %}">HOME</a></li>
+                    <li class="link"><a href="{% url 'cart' %}">CART</a></li>
+                    <li class="link"><a href="{% url 'aboutus' %}">ABOUT US</a></li>
+                    {% if user.is_authenticated %}
+                        <li class="link"><a href="{% url 'user-profile' %}">PROFILE</a></li>
+                        <li class="link"><a href="{% url 'login' %}">LOGOUT</a></li>
+                    {% else %}
+                        <li class="link"><a href="{% url 'login' %}">LOGIN</a></li>
+                        <li class="link"><a href="{% url 'signup' %}">SIGNUP</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

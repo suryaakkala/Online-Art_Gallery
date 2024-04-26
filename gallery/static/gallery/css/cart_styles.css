@@ -1,0 +1,37 @@
+/* cart_styles.css */
+
+/* Style for the cart container */
+.cart-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style for the cart items list */
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style for each cart item */
+.cart-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Style for the item name */
+.item-name {
+    font-weight: bold;
+}
+
+/* Style for the item quantity */
+.item-quantity {
+    color: #666;
+}
+
+/* Style for the continue shopping link */
+.continue-shopping {
+    display: block;
+    margin-top: 20px;
+}

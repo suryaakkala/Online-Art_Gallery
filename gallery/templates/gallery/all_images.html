@@ -1,0 +1,25 @@
+<!-- gallery/templates/gallery/all_images.html -->
+{% extends 'gallery/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'gallery/css/styles.css' %}">
+  <div class="container">
+    <h2>All Images</h2>
+    <div class="row">
+      {% for artwork in artworks %}
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="{{ artwork.image.url }}" class="card-img-top" alt="{{ artwork.title }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ artwork.title }}</h5>
+              <p class="card-text">{{ artwork.artist }}</p>
+              <p class="card-text">Price: ${{ artwork.price }}</p>
+              <!-- Add any other details you want to display -->
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

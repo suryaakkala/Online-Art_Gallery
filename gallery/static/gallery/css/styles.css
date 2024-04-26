@@ -1,0 +1,123 @@
+/* gallery/static/gallery/css/styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96vh;
+    background-image: url('/gallery/static/gallery/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #000000;
+    color: #bbbbbb;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%; 
+    top: 0;
+    z-index: 1000; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    background-color: #222; 
+    width: 100%; 
+    border-radius: 5px; 
+}
+
+.navbar-left {
+    display: flex;
+    align-items: left;
+}
+
+.navbar-left a.logo { 
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px; 
+    font-weight: bold; 
+    padding: 0 15px; 
+}
+
+.navbar-right ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding:0 15px;
+    list-style: none;
+}
+
+.navbar-right a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link {
+    position: relative;
+    padding: 4px 15px;
+    float: right;
+}
+
+.link::after,
+.link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.6s ease-in-out;
+}
+
+.link::after {
+    top: 0;
+    right: 0;
+    transform-origin: right;
+}
+
+.link::before {
+    left: 0;
+    bottom: 0;
+    transform-origin: left;
+}
+
+.link:hover::after,
+.link:hover::before {
+    width: 100%;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.artwork-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.artwork-item {
+    text-align: center;
+}
+
+.artwork-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

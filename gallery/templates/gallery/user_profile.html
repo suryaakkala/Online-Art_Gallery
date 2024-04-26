@@ -1,0 +1,53 @@
+<!-- gallery/templates/gallery/user_profile.html -->
+{% extends 'gallery/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="profile-container">
+    <h2>Welcome, {{ user.username }}!</h2>
+    <p>Email: {{ user.email }}</p>
+    <!-- Add additional user details here -->
+    {% if user.profile.picture %}
+      <img src="{{ user.profile.picture.url }}" alt="Profile Picture" class="profile-picture">
+    {% else %}
+      <p class="no-picture">No profile picture uploaded</p>
+    {% endif %}
+    <p class="bio">Bio: {{ user.profile.bio }}</p>
+    <button class="button" onclick="redirectToLogin()">Upload Image</button>
+    <!-- Add more details about the user here -->
+  </div>
+  <script>
+    function redirectToLogin() {
+      setTimeout(function() {
+        window.location.href = "/upload"; 
+      }, 1000); //delay
+    }
+  </script>
+  <style>
+    .profile-container {
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 10px auto;
+      display: block;
+    }
+
+    .no-picture {
+      color: #888;
+    }
+
+    .bio {
+      margin-top: 20px;
+    }
+  </style>
+{% endblock %}
+

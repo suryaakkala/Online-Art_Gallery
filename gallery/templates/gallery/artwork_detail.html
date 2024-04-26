@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ artwork.title }} - Art Gallery</title>
+    <!-- Include this in artwork_list.html and artwork_detail.html -->
+<link rel="stylesheet" href="{% static 'gallery/css/styles.css' %}">
+<script src="{% static 'gallery/js/script.js' %}"></script>
+
+</head>
+<body>
+    <h1>{{ artwork.title }} by {{ artwork.artist.name }}</h1>
+    <p>{{ artwork.description }}</p>
+    <p>Price: ${{ artwork.price }}</p>
+    <img src="{{ artwork.image.url }}" alt="{{ artwork.title }}">
+    <a href="{% url 'artwork-list' %}">Back to Art Gallery</a>
+</body>
+</html>
