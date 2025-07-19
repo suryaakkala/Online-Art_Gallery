@@ -72,8 +72,10 @@ suryaakkala-online-art_gallery/
 - **Surya Akkala** (Team Lead, Backend Developer)  
   GitHub: [@suryaakkala](https://github.com/suryaakkala)
 
-- **[Frontend Teammate 1 Name]** – Frontend Developer  
-- **[Frontend Teammate 2 Name]** – Frontend Developer  
+- **Sruthi Kanneti** – Frontend Developer  
+  GitHub: [@Sruthi-3-0](https://github.com/Sruthi-3-0) 
+- **G. Karuna Sri** – Frontend Developer  
+  GitHub: [@Karunasri921](https://github.com/Karunasri921)
 
 ---
 
