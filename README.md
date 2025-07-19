@@ -18,6 +18,19 @@ An online platform to showcase, upload, and explore artwork. Users can sign up, 
 - **Database**: SQLite3
 - **Tools**: Django Admin, Forms, Staticfiles
 
+## 📦 Modules
+
+The project is organized into the following Django apps and components:
+
+- **`art_gallery/`** – Project-level configuration including settings, URLs, WSGI, and ASGI setup.
+- **`gallery/`** – Core application handling:
+  - Artwork models and upload logic
+  - Forms and view definitions
+  - Custom templates and static assets for user interface
+- **`login/`** – A dedicated app for handling user authentication and login-related logic.
+- **`static/`** – Static assets including CSS and JS files for both admin and custom frontend styling.
+- **`templates/`** – HTML templates for rendering the UI, structured under the gallery namespace.
+
 ## 🏁 Getting Started
 
 ### 1. Clone the repository
@@ -71,7 +84,6 @@ suryaakkala-online-art_gallery/
 
 - **Surya Akkala** (Team Lead, Backend Developer)  
   GitHub: [@suryaakkala](https://github.com/suryaakkala)
-
 - **Sruthi Kanneti** – Frontend Developer  
   GitHub: [@Sruthi-3-0](https://github.com/Sruthi-3-0) 
 - **G. Karuna Sri** – Frontend Developer  
